@@ -1,14 +1,32 @@
+:root {
+    --bg-color-light: #fff;
+    --text-color-light: #000;
+    --bg-color-dark: #121212;
+    --text-color-dark: #fff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
 }
 
 header {
