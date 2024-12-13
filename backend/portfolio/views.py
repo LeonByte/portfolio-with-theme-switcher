@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from .models import Project, Contact
+from django.http import HttpResponse
+
+def home(request):
+    theme = request.COOKIES.get('theme', 'light')  # Get the theme from cookies or default to 'light'
+    response = render(request, 'index.html', {'theme': theme})
+    return response
 
 def index(request):
     projects = Project.objects.all()
