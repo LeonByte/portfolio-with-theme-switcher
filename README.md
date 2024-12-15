@@ -90,7 +90,8 @@ portfolio-with-theme-switcher/
 │   │   ├── models.py            # Database models for projects, blog, etc.
 │   │   ├── views.py             # Views to render portfolio pages
 │   │   ├── urls.py              # URLs configuration for your portfolio
-│   │   └── admin.py             # Admin setup (if using Django)
+│   │   ├── admin.py             # Admin setup (if using Django)
+│   │   └── migrations/          # Folder for database migrations
 │   ├── settings.py              # Django settings (or Flask equivalent)
 │   ├── urls.py                  # Main URLs configuration for the backend
 │   ├── wsgi.py                  # WSGI configuration (for production deployment)
@@ -100,15 +101,18 @@ portfolio-with-theme-switcher/
 │   ├── assets/                  # Folder for images, fonts, icons
 │   ├── css/                     # CSS files
 │   │   ├── style.css            # Main stylesheet for the site
-│   │   └── dark-mode.css        # Custom styles for dark mode
+│   │   ├── dark-mode.css        # Custom styles for dark mode
+│   │   └── theme.css            # New CSS variables and theme styles
 │   ├── js/                      # JavaScript files
 │   │   ├── theme-toggle.js      # JS for theme switching functionality
 │   │   └── browser-detection.js # JS for detecting user browser
-│   ├── index.html               # Homepage for the portfolio
-│   ├── about.html               # About me page
-│   ├── projects.html            # Page to showcase your projects
-│   ├── contact.html             # Contact page with form and details
-│   └── 404.html                 # Custom 404 page (optional)
+│   ├── templates/               # Template files for the frontend (Django templates)
+│   │   ├── base.html            # Base template to be extended (Header, Footer)
+│   │   ├── index.html           # Homepage for the portfolio
+│   │   ├── about.html           # About me page
+│   │   ├── projects.html        # Page to showcase your projects
+│   │   ├── contact.html         # Contact page with form and details
+│   │   └── 404.html             # Custom 404 page (optional)
 │
 ├── .gitignore                   # Git ignore file (exclude unnecessary files)
 ├── README.md                    # Readme file explaining the project and setup
